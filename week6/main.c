@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    // --- DECLARE ARRAYS ---
-    // I am using 5 for testing. Change to 50, 10, and 20 for final submission.
-    float salaries[5]; 
-    float budgets[5]; 
-    char registrations[5][20]; 
+    
+    float salaries[50]; 
+    float budgets[10]; 
+    char registrations[20][20]; 
 
     int choice;
     int i, j; 
@@ -28,7 +27,7 @@ int main() {
             // --- PART A: EMPLOYEE SALARIES ---
             case 1:
                 printf("\n--- ENTER 5 SALARIES ---\n");
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 50; i++) {
                     printf("Enter salary for employee %d: ", i + 1);
                     scanf("%f", &salaries[i]);
                 }
@@ -39,7 +38,7 @@ int main() {
                 highest = salaries[0]; // Set first salary as highest
                 lowest = salaries[0];  // Set first salary as lowest
 
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 50; i++) {
                     printf("%.2f\n", salaries[i]);
                     total = total + salaries[i];
 
@@ -61,13 +60,13 @@ int main() {
             // --- PART B: DEPARTMENT BUDGETS ---
             case 2:
                 printf("\n--- ENTER 5 BUDGETS ---\n");
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 10; i++) {
                     printf("Enter budget for department %d: ", i + 1);
                     scanf("%f", &budgets[i]);
                 }
 
                 // Bubble Sort (Lowest to Highest)
-                for (i = 0; i < 5 - 1; i++) {
+                for (i = 0; i < 10 - 1; i++) {
                     for (j = 0; j < 5 - i - 1; j++) {
                         if (budgets[j] > budgets[j + 1]) {
                             // The Swap Logic
@@ -79,7 +78,7 @@ int main() {
                 }
 
                 printf("\nBudgets sorted from lowest to highest:\n");
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 10; i++) {
                     printf("%.2f\n", budgets[i]);
                 }
                 break;
@@ -87,13 +86,13 @@ int main() {
             // --- PART C: VEHICLE REGISTRATIONS ---
             case 3:
                 printf("\n--- ENTER 5 REGISTRATIONS ---\n");
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 20; i++) {
                     printf("Enter vehicle registration %d: ", i + 1);
                     scanf("%19s", registrations[i]); // The 19 stops buffer overflow
                 }
 
                 printf("\nAll Vehicle Registrations:\n");
-                for (i = 0; i < 5; i++) {
+                for (i = 0; i < 20; i++) {
                     printf("%s\n", registrations[i]);
                 }
                 break;
