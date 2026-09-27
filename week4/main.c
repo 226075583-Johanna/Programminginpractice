@@ -3,13 +3,11 @@
 int main() { 
 
 char supplierName[50]; 
-float price; 
-float budget; 
-int registered; 
-int documentsComplete; 
+float price, budget; 
+int registered, documentsComplete; 
 
 printf("Enter supplier name: "); 
-scanf("%49s", supplierName);
+scanf("%49s", &supplierName);
  
 printf("Enter tender price: "); 
 scanf("%f", &price); 
