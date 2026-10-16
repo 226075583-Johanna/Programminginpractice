@@ -7,7 +7,7 @@ int main() {
     float highest = 0; 
     float lowest = 0; 
     float average; 
-    int numEmployees = 5;
+    int numEmployees = 50;
  
     for (int i = 1; i <= numEmployees; i++) { 
  
